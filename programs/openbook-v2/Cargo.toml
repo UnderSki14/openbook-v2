@@ -1,5 +1,3 @@
-cargo-features = ["workspace-inheritance"]
-
 [package]
 description = "Created with Anchor"
 edition = "2021"
@@ -18,39 +16,36 @@ no-idl = []
 no-log-ix-name = []
 test-bpf = ["client"]
 client = ["solana-sdk", "no-entrypoint"]
-# Enables GPL-licensed parts of the code. See LICENSE file.
 enable-gpl = []
 
-
 [dependencies]
-anchor-lang = { workspace = true, features = ["event-cpi"] }
+anchor-lang = { workspace = true }
 anchor-spl = { workspace = true }
-arbitrary = { version = "~1.0", features = ["derive"], optional = true }
-arrayref = "0.3.6"
-bytemuck = { version = "^1.7.2", features = ["derive", "min_const_generics"] }
+solana-program = { workspace = true }
+spl-memo = { git = "https://github.com/solana-labs/solana-program-library", tag = "token-2022-v0.9.0 }
+spl-token-2022 = { git = "https://github.com/solana-labs/solana-program-library", tag = "token-2022-v0.9.0 }
+arrayref = "0.3.9"
+bytemuck = { version = "^1.0.0", features = ["derive"] }
+num_enum = "0.7.3"
+pyth-sdk-solana = { workspace = true }
+fixed = { workspace = true }
+solana-security-txt = "1.3.0"
+switchboard-solana = "0.29.99"
 default-env = "0.1.1"
 derivative = "2.2.0"
-fixed = { workspace = true, features = ["serde", "borsh", "debug-assert-in-release"] }
-itertools = "0.10.3"
-num_enum = "0.5.1"
-pyth-sdk-solana = { workspace = true }
-solana-security-txt = "1.1.1"
-solana-program = { workspace = true }
-solana-sdk = { workspace = true, optional = true }
-static_assertions = "1.1"
-switchboard-program = ">=0.2.0"
-switchboard-solana = "0.29.99"
+itertools = "0.13.0"
 
 [dev-dependencies]
-async-trait = "0.1.52"
-base64 = "0.13.0"
-log = "0.4.14"
-env_logger = "0.9.0"
-itertools = "0.10.3"
-lazy_static = "1.4.0"
-num = "0.4.0"
-rand = "0.8.4"
 solana-program-test = { workspace = true }
+solana-sdk = { workspace = true }
 solana-logger = { workspace = true }
-spl-token = { version = "^3.5.0", features = ["no-entrypoint"] }
-spl-associated-token-account = { workspace = true, features = ["no-entrypoint"] }
+spl-token = { version = "^4.0.0", features = ["no-entrypoint"] }
+spl-associated-token-account = { workspace = true }
+async-trait = "0.1.18"
+base64 = "0.22"
+log = "0.4.22"
+env_logger = "0.11.5"
+itertools = "0.13.0"
+lazy_static = "1.5.0"
+num = "0.4.3"
+rand = "0.8.5"
