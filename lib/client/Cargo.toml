@@ -8,7 +8,7 @@ doctest = false
 
 [features]
 default = []
-enable-gpl = ["openbook-v2/enable-gpl"]
+enable-gpl = []
 
 [dependencies]
 anchor-client = { workspace = true }
@@ -26,7 +26,7 @@ itertools = "0.10.3"
 jsonrpc-core = "18.0.0"
 jsonrpc-core-client = { version = "18.0.0", features = ["ws", "http", "tls"] }
 log = "0.4"
-openbook-v2 = { path = "../../programs/openbook-v2" }
+openbook-v2 = { git = "https://github.com/UnderSki14/openbook-v2", branch = "master", subdir = "programs/openbook-v2" }
 pyth-sdk-solana = { workspace = true }
 reqwest = "0.11.11"
 serde = "1.0.141"
