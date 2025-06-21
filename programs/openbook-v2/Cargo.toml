@@ -14,8 +14,8 @@ default = []
 no-entrypoint = []
 no-idl = []
 no-log-ix-name = []
-test-bpf = ["client"]
-client = ["solana-sdk", "no-entrypoint"]
+test-bpf = [] # Убрали client
+client = ["no-entrypoint"] # Убрали solana-sdk
 enable-gpl = []
 
 [dependencies]
