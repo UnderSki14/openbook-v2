@@ -762,13 +762,11 @@ impl<'a> TransactionBuilder<'a> {
         blockhash: Hash,
     ) -> anyhow::Result<solana_sdk::transaction::VersionedTransaction> {
         if let Some(prio_price) = self.config.prioritization_micro_lamports {
-            self.instructions.insert(
-                0,
-                solana_sdk::compute_budget::ComputeBudgetInstruction::set_compute_unit_price(
-                    prio_price,
-                ),
-            )
-        }
+    self.instructions.insert(
+        0,
+        // solana_sdk::compute_budget::ComputeBudgetInstruction::set_compute_unit_price(prio_price),
+    );
+    }
         let v0_message = solana_sdk::message::v0::Message::try_compile(
             &self.payer,
             &self.instructions,
