@@ -7,7 +7,7 @@ version = "0.3.0"
 doctest = false
 
 [features]
-default = ["openbook-v2/client"]
+default = []
 enable-gpl = ["openbook-v2/enable-gpl"]
 
 [dependencies]
