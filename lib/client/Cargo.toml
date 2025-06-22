@@ -35,7 +35,7 @@ shellexpand = "2.1.0"
 solana-account-decoder = { workspace = true }
 solana-client = { workspace = true }
 solana-rpc = { workspace = true }
-solana-sdk = { workspace = true }
+# solana-sdk = { workspace = true }
 spl-associated-token-account = { workspace = true }
 thiserror = "1.0.31"
 tokio = { version = "1", features = ["full"] }
