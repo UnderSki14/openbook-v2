@@ -37,7 +37,7 @@ derivative = "2.2.0"
 itertools = "0.10.3"
 
 [dev-dependencies]
-solana-program-test = { workspace = true }
+# solana-program-test = { workspace = true }
 # solana-sdk = { workspace = true }
 solana-logger = { workspace = true }
 spl-token = { version = "^3.5.0", features = ["no-entrypoint"] }
